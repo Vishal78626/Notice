@@ -1,0 +1,44 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container-fluid border">
+ 
+    <div class="row">
+        <div class="col ml-1">
+            {{ frappe.format_date(date) }}
+        </div>
+        <div class="col">
+            <h5 class="text-info ml-10">{{ name }}</h5>
+        </div>
+        <div class="col mr-1">
+            <b class="float-right">{{ tag }}</b>
+        </div>
+    </div>
+
+    <div class="mt-10">
+        <h1>{{ subject }}</h1>
+    </div>
+
+    <div class="mt-5">
+        {{ content }}
+    </div>
+
+    <div class="mt-5">
+        <a href="{{attachment}}" target="_blank">Attachment</a>
+    </div>
+
+
+    <div class="mt-5 row">
+        <div class="col">
+            <p class="float-right">Digitally verified By Head of {{department}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <b class="float-right">{{ hod }}</b>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
